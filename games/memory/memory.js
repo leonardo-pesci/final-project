@@ -42,7 +42,7 @@ placeCards()
 
 cards.forEach( (card, index) => {
     card.addEventListener('click', () => {
-        card.style.backgroundImage = `url(./img/${cardsAnimals[index]}.png`
+        card.style.backgroundImage = `url(./../img/${cardsAnimals[index]}.png`
         if (index === first) return // annulla il secondo tocco della stessa carta
         if (cardSelected % 2 === 0) first = index
         else {
@@ -55,7 +55,7 @@ cards.forEach( (card, index) => {
 
 let hideCard = (list) => {
     list.forEach( (card) => {
-        cards[card].style.backgroundImage = 'url(./img/questionMark.png'
+        cards[card].style.backgroundImage = 'url(./../img/questionMark.png'
     })
 }
 
