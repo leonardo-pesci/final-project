@@ -6,12 +6,13 @@
 }
 
 :root {
-    --color-nav: #6b45cb;
-    --color-primary: #8367C7;
+    --color-nav: #8367C7;
+    --color-primary: #6b45cb;
     --color-sec: #B3E9C7;
     --color-ter: #C2F8CB;
+    --color-quad: #7df58f;
     --color-btn: #FFBA49;
-    --color-bg: #F0FFF1;
+    --color-bg: #d4f6d7;
     --color-text: #000000;
 }
 
@@ -58,13 +59,14 @@ html {
     position: relative;
 }
 
-header {
+#mainHeader {
+    width: 100%;
     background-color: var(--color-nav);
     border-bottom: 0;
 }
 
-#mainHeader {
-    width: 100%;
+#mainHeader nav {
+    background-color: var(--color-nav) !important;
 }
 
 #mainHero {
@@ -72,7 +74,12 @@ header {
 }
 
 
+
 /*^ ALBUM */
+.album {
+    background-color: var(--color-bg) !important;
+}
+
 .album .container .row {
     display: flex;
     flex-direction: row;
@@ -80,6 +87,7 @@ header {
 }
 
 .albumItem .card{
+    background: radial-gradient(circle, var(--color-ter) 0%, var(--color-quad) 95%);
     border-radius: 10px;
     overflow: hidden;
     height: 370px;
@@ -91,7 +99,7 @@ header {
 }
 
 .albumItemTitle {
-
+    color: var(--color-nav);
 }
 
 .albumItemBtn {
@@ -116,10 +124,14 @@ header {
 /*^ THUMBNAILS */
 #morra {
     background-image: url(./../img/morra.png);
+    position: relative;
+    top: 20px;
 }
 
 #memory {
     background-image: url(./../img/memory.png);
+    position: relative;
+    top: 15px;
 }
 
 #digita {
@@ -132,8 +144,23 @@ header {
 
 #ducker {
     background-image: url(./../img/ducker.png);
+    position: relative;
+    top: 35px;
 }
 
 #coppaDelRe {
     background-image: url(./../img/coppaDelRe.png);
 }
+
+#milionario {
+    background-image: url(./../img/milionario.png);
+}
+
+#chatventure {
+    background-image: url(./../img/chatventure.png);
+}
+
+#stickerStacker {
+    background-image: url(./../img/stickerStacker.png);
+}
+

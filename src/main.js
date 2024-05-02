@@ -22,13 +22,11 @@ if (starredStorage) starred = JSON.parse(starredStorage)
 //^ FUNCTIONS
 let renderStars = () => {
 
-
-
     localStorage.setItem('starred', JSON.stringify(starred))
     console.log(starred)
 
     stars.forEach( (star, index) => {
-        if (index in starred) star.classList.add('starFull')
+        if (starred.includes(index)) stars[index].classList.add('starFull')
         else star.classList.remove('starFull')
     })
 }
@@ -54,18 +52,17 @@ navBtn.forEach( (btn) => {
 })
 
 stars.forEach( (star, index) => {
+    
     star.addEventListener('click', () => {
-        // star.classList.toggle('starFull')
-        if (index in starred) {
-            const j = starred.indexOf(index)
-            starred.splice(j, 1)
-        } else {
-            starred.push(index)
-        }
+
+    if (starred.includes(index)) {
+        const j = starred.indexOf(index)
+        console.log(j)
+        starred.splice(j, 1)
+    } else {
+        starred.push(index)
+    }
         
         renderStars()
     })
 })
-
-
-
