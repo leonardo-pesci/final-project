@@ -65,6 +65,27 @@ F0FFF1
 
 */
 
+
+
+
+
+
+.albumItem {
+
+}
+
+.albumItemTitle {
+
+}
+
+.albumItemBtn {
+    background-color: #FFBA49;
+    border: 1px solid #000000;
+}
+
+
+
+
 /*^ Control classes */
 .hidden {
     display: none;
