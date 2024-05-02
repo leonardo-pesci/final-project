@@ -53,8 +53,9 @@ header {
 
 
 /*^ Album */
-.albumItem {
-
+.albumItem .card{
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .albumItemTitle {
@@ -64,6 +65,20 @@ header {
 .albumItemBtn {
     background-color: var(--color-btn);
     border: 1px solid var(--color-text);
+}
+
+.albumItemBtn:hover {
+    color: var(--color-nav);
+}
+
+.star {
+    width: 32px;
+    height: 32px;
+    background-image: url(./../img/starEmpty.png);
+}
+
+.starFull {
+    background-image: url(./../img/starFull.png);
 }
 
 
@@ -76,4 +91,10 @@ header {
 
 .pointer {
     cursor: pointer;
+}
+
+.fitImg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
