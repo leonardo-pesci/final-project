@@ -53,10 +53,17 @@ html {
     font-size: 16px;
 }
 
-.cob {
-    width: 28px;
-    height: 28px;
+.controller {
+    width: 32px;
+    height: 32px;
+}
+
+.hammer {
+    width: 54px;
+    height: 44px;
     position: relative;
+    bottom: 6px;
+    margin: 0 -15px;
 }
 
 #mainHeader {
@@ -164,3 +171,14 @@ html {
     background-image: url(./../img/stickerStacker.png);
 }
 
+.placeholder {
+    width: 100%;
+    height: 146.53px;
+    background-color: var(--color-sec);
+}
+
+@media only screen and (max-width: 471px) {
+    .placeholder {
+        height: 186.53px;
+    }
+}
