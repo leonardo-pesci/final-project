@@ -48,6 +48,10 @@ html {
     color: var(--color-text);
 }
 
+.btn {
+    font-size: 16px;
+}
+
 .cob {
     width: 28px;
     height: 28px;
@@ -122,3 +126,14 @@ header {
     background-image: url(./../img/digita.png);
 }
 
+#campoMinato {
+    background-image: url(./../img/campoMinato.png);
+}
+
+#ducker {
+    background-image: url(./../img/ducker.png);
+}
+
+#milionario {
+    background-image: url(./../img/milionario.png);
+}
