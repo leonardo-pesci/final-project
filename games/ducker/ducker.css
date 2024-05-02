@@ -1,0 +1,1109 @@
+/* * ============================================================================================== */
+/* *                                       GENERALI
+/* * ============================================================================================== */
+/* CSS RESET */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Generali */
+html{
+    position: fixed;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    color: #001732;
+    background-color: #d8eee8;
+    font-family: 'Darker Grotesque', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* * ============================================================================================== */
+/* *                                    SCHERMATA INIZIALE
+/* * ============================================================================================== */
+.initial{
+    width: 44%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chooseCharacter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image img{
+    width: auto;
+    height: 200px;
+}
+
+.arrow {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#leftArrow{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/others/leftArrow.png);
+}
+
+#rightArrow{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/others/rightArrow.png);
+}
+
+.button{
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    border: 2px solid #001732;
+    cursor: pointer;
+}
+
+.soundOn{
+    background-image: url(img/menu/soundOn.png);
+    left: 0;
+}
+
+.soundOff{
+    background-image: url(img/menu/soundOff.png);
+    left: 0;
+}
+
+.heartButton{
+    background-image: url(img/menu/heart.png);
+    right: 0;
+}
+
+.difficulty{
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 22px;
+    padding: 5px;
+    border-top: 2px solid #001732;
+    border-left: 2px solid #001732;
+    border-bottom: 2px solid #001732;
+    cursor: pointer;
+}
+
+.difficulty:nth-of-type(3){
+    border-right: 2px solid #001732;
+}
+
+.playButton{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: 2px solid #001732;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: #97edd6;
+}
+
+
+
+/* * ============================================================================================== */
+/* *                                          GIOCO
+/* * ============================================================================================== */
+/* Pannello di gioco */
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.scoreBox{
+	font-size: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.coinImage{
+    width: 30px;
+    height: 100%;
+    background-image: url(img/others/coin.png);
+    background-position: 0 60%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    float: left;
+}
+
+
+
+/* Griglia di gioco */
+.gameContainer{
+    width: 484px;
+}
+
+.gameBoard{
+    width: 100%;
+    position: relative;
+    border: 2px solid #001732;
+}
+
+.grid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+
+/* Menu */
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.menuOption{
+    width: 46%;
+    height: 40px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border: 2px solid #001732;
+    cursor: pointer;
+}
+
+.pause{
+    background-image: url(img/menu/pause.png);
+}
+
+.resume{
+    background-image: url(img/menu/resume.png);
+}
+
+.home{
+    background-image: url(img/menu/home.png);
+}
+
+
+
+/* Tabellone di gioco */
+.lifePanel{
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin: 12px 0 2px;
+}
+
+.heart{
+	width: 34px;
+	height: 34px;
+	background-image: url(img/menu/heart.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.heartUsed{
+	background-image: url(img/menu/heartUsed.png);
+}
+
+.text{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+
+
+/* * ============================================================================================== */
+/* *                                       STILI CELLA
+/* * ============================================================================================== */
+
+/* * ===================================================================== */
+/* *                            GENERALI
+/* * ===================================================================== */
+.cell{
+	width: calc(100% / 9);
+	height: 0;
+    padding-top: calc(100% / 9);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.reverse{
+	transform: scaleX(-1);
+}
+
+/* * ===================================================================== */
+/* *                            NORMALI
+/* * ===================================================================== */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+/* Summer */
+.grassSummer{
+	background-image: url(img/grassType/Summer/grass.png);
+}
+
+.grassSummer.rockSummer{
+	background-image: url(img/grassType/Summer/rock.png), url(img/grassType/Summer/grass.png);
+}
+
+.grassSummer.treeSummer{
+    background-image: url(img/grassType/Summer/tree.png), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.grassSpring{
+	background-image: url(img/grassType/Spring/grass.png);
+}
+
+.grassSpring.rockSpring{
+	background-image: url(img/grassType/Spring/rock.png), url(img/grassType/Spring/grass.png);
+}
+
+.grassSpring.treeSpring{
+    background-image: url(img/grassType/Spring/tree.png), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.grassWinter{
+	background-image: url(img/grassType/Winter/grass.png);
+}
+
+.grassWinter.rockWinter{
+	background-image: url(img/grassType/Winter/rock.png), url(img/grassType/Winter/grass.png);
+}
+
+.grassWinter.treeWinter{
+    background-image: url(img/grassType/Winter/tree.png), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.grassFall{
+	background-image: url(img/grassType/Fall/grass.png);
+}
+
+.grassFall.rockFall{
+	background-image: url(img/grassType/Fall/rock.png), url(img/grassType/Fall/grass.png);
+}
+
+.grassFall.treeFall{
+    background-image: url(img/grassType/Fall/tree.png), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  RIVER
+/* * ============================================= */
+.river{
+	background-image: url(img/riverType/river.png);
+}
+
+.river.wood{
+	background-image: url(img/riverType/wood.png), url(img/riverType/river.png);
+}
+
+.river.crocodile{
+    background-image: url(img/riverType/crocodile.png), url(img/riverType/river.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+.swamp{
+	background-image: url(img/swampType/swamp.png);
+}
+
+.swamp.lilypad{
+    background-image: url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+.road{
+	background-image: url(img/roadType/road.png);
+}
+
+.road.car{
+	background-image: url(img/roadType/car.png), url(img/roadType/road.png);
+}
+
+.road.jeep{
+	background-image: url(img/roadType/jeep.png), url(img/roadType/road.png);
+}
+
+.road.bus{
+	background-image: url(img/roadType/bus.png), url(img/roadType/road.png);
+}
+
+.road.camion1{
+	background-image: url(img/roadType/camion1.png), url(img/roadType/road.png);
+}
+
+.road.camion2{
+	background-image: url(img/roadType/camion2.png), url(img/roadType/road.png);
+}
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+/* ! semaforo */
+.rail{
+    background-image: url(img/railType/rail.png);
+}
+
+.rail.train1{
+    background-image: url(img/railType/train1.png), url(img/railType/rail.png);
+}
+
+.rail.train2{
+    background-image: url(img/railType/train2.png), url(img/railType/rail.png);
+}
+
+.rail.train3{
+    background-image: url(img/railType/train3.png), url(img/railType/rail.png);
+}
+
+
+
+/* * ===================================================================== */
+/* *                              PIG
+/* * ===================================================================== */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+.duck.grassSummer{
+	background-image: url(img/characters/duck/walk.gif), url(img/characters/duck/walk.gif), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.duck.grassSpring{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.duck.grassWinter{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.duck.grassFall{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  RIVER
+/* * ============================================= */
+.duck.river{
+	background-image: url(img/characters/duck/walk.gif), url(img/riverType/wood.png), url(img/riverType/river.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+.duck.swamp{
+    background-image: url(img/characters/duck/walk.gif), url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+.duck.road{
+	background-image: url(img/characters/duck/walk.gif), url(img/roadType/road.png);
+}
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+.duck.rail{
+    background-image: url(img/characters/duck/walk.gif), url(img/railType/rail.png);
+}
+
+/* * ============================================= */
+/* *                   MORTI
+/* * ============================================= */
+.duckHit{
+	background-image: url(img/characters/duck/hit.png), url(img/roadType/road.png);
+}
+
+.charTrain{
+    display: none;
+}
+
+.duckDrowned{
+	background-image: url(img/characters/duck/drowned.png), url(img/riverType/river.png);
+}
+
+/* ! da aggiungere */
+.duckEaten{
+    background-image: url(img/characters/duck/eaten);
+}
+
+
+
+/* * ===================================================================== */
+/* *                              pig
+/* * ===================================================================== */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+.pig.grassSummer{
+	background-image: url(img/characters/pig/walk.gif), url(img/characters/pig/walk.gif), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.pig.grassSpring{
+	background-image: url(img/characters/pig/walk.gif), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.pig.grassWinter{
+	background-image: url(img/characters/pig/walk.gif), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.pig.grassFall{
+	background-image: url(img/characters/pig/walk.gif), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  RIVER
+/* * ============================================= */
+.pig.river{
+	background-image: url(img/characters/pig/walk.gif), url(img/riverType/wood.png), url(img/riverType/river.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+.pig.swamp{
+    background-image: url(img/characters/pig/walk.gif), url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+.pig.road{
+	background-image: url(img/characters/pig/walk.gif), url(img/roadType/road.png);
+}
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+.pig.rail{
+    background-image: url(img/characters/pig/walk.gif), url(img/railType/rail.png);
+}
+
+/* * ============================================= */
+/* *                   MORTI
+/* * ============================================= */
+.pigHit{
+	background-image: url(img/characters/pig/hit.png), url(img/roadType/road.png);
+}
+
+.charTrain{
+    display: none;
+}
+
+.pigDrowned{
+	background-image: url(img/characters/pig/drowned.png), url(img/riverType/river.png);
+}
+
+/* ! da aggiungere */
+.pigEaten{
+    background-image: url(img/characters/pig/eaten);
+}
+
+
+
+/* * ===================================================================== */
+/* *                              DUCK
+/* * ===================================================================== */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+.duck.grassSummer{
+	background-image: url(img/characters/duck/walk.gif), url(img/characters/duck/walk.gif), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.duck.grassSpring{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.duck.grassWinter{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.duck.grassFall{
+	background-image: url(img/characters/duck/walk.gif), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  RIVER
+/* * ============================================= */
+.duck.river{
+	background-image: url(img/characters/duck/walk.gif), url(img/riverType/wood.png), url(img/riverType/river.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+.duck.swamp{
+    background-image: url(img/characters/duck/walk.gif), url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+.duck.road{
+	background-image: url(img/characters/duck/walk.gif), url(img/roadType/road.png);
+}
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+.duck.rail{
+    background-image: url(img/characters/duck/walk.gif), url(img/railType/rail.png);
+}
+
+.duck.train1{
+    background-image: url(img/railType/train1.png), url(img/railType/rail.png);
+}
+
+.duck.train2{
+    background-image: url(img/railType/train2.png), url(img/railType/rail.png);
+}
+
+.duck.train3{
+    background-image: url(img/railType/train3.png), url(img/railType/rail.png);
+}
+
+/* * ============================================= */
+/* *                   MORTI
+/* * ============================================= */
+.duckHit{
+	background-image: url(img/characters/duck/hit.png), url(img/roadType/road.png);
+}
+
+.duckHit.car{
+	background-image: url(img/roadType/car.png), url(img/roadType/road.png);
+}
+
+.duckHit.jeep{
+	background-image: url(img/roadType/jeep.png), url(img/roadType/road.png);
+}
+
+.duckHit.bus{
+	background-image: url(img/roadType/bus.png), url(img/roadType/road.png);
+}
+
+.duckHit.camion1{
+	background-image: url(img/roadType/camion1.png), url(img/roadType/road.png);
+}
+
+.duckHit.camion2{
+	background-image: url(img/roadType/camion2.png), url(img/roadType/road.png);
+}
+
+.charTrain{
+    display: none;
+}
+
+.duckDrowned{
+	background-image: url(img/characters/duck/drowned.png), url(img/riverType/river.png);
+}
+
+/* ! da aggiungere */
+.duckEaten{
+    background-image: url(img/characters/duck/eaten);
+}
+
+
+
+/* * ===================================================================== */
+/* *                               COIN
+/* * ===================================================================== */
+/* ! moneta sul semaforo */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+/* Summer */
+.coin.grassSummer{
+	background-image: url(img/others/coin.gif), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.coin.grassSpring{
+	background-image: url(img/others/coin.gif), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.coin.grassWinter{
+	background-image: url(img/others/coin.gif), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.coin.grassFall{
+	background-image: url(img/others/coin.gif), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+.coin.swamp.lilypad{
+    background-image: url(img/others/coin.gif), url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+.coin.road{
+	background-image: url(img/others/coin.gif), url(img/roadType/road.png);
+}
+
+.coin.road.car{
+	background-image: url(img/roadType/car.png), url(img/roadType/road.png);
+}
+
+.coin.road.jeep{
+	background-image: url(img/roadType/jeep.png), url(img/roadType/road.png);
+}
+
+.coin.road.bus{
+	background-image: url(img/roadType/bus.png), url(img/roadType/road.png);
+}
+
+.coin.road.camion1{
+	background-image: url(img/roadType/camion1.png), url(img/roadType/road.png);
+}
+
+.coin.road.camion2{
+	background-image: url(img/roadType/camion2.png), url(img/roadType/road.png);
+}
+
+
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+.coin.rail{
+    background-image: url(img/others/coin.gif), url(img/railType/rail.png);
+}
+
+.coin.rail.train1{
+    background-image: url(img/railType/train1.png), url(img/railType/rail.png);
+}
+
+.coin.rail.train2{
+    background-image: url(img/railType/train2.png), url(img/railType/rail.png);
+}
+
+.coin.rail.train3{
+    background-image: url(img/railType/train3.png), url(img/railType/rail.png);
+}
+
+
+
+/* * ===================================================================== */
+/* *                            EAGLE
+/* * ===================================================================== */
+
+/* * ============================================= */
+/* *                  GRASS
+/* * ============================================= */
+/* Summer */
+.eagle.grassSummer{
+	background-image: url(img/others/eagle.png), url(img/grassType/Summer/grass.png);
+}
+
+.eagle.grassSummer.rockSummer{
+	background-image: url(img/others/eagle.png), url(img/grassType/Summer/rock.png), url(img/grassType/Summer/grass.png);
+}
+
+.eagle.grassSummer.treeSummer{
+    background-image: url(img/others/eagle.png), url(img/grassType/Summer/tree.png), url(img/grassType/Summer/grass.png);
+}
+
+/* Spring */
+.eagle.grassSpring{
+	background-image: url(img/others/eagle.png), url(img/grassType/Spring/grass.png);
+}
+
+.eagle.grassSpring.rockSpring{
+	background-image: url(img/others/eagle.png), url(img/grassType/Spring/rock.png), url(img/grassType/Spring/grass.png);
+}
+
+.eagle.grassSpring.treeSpring{
+    background-image: url(img/others/eagle.png), url(img/grassType/Spring/tree.png), url(img/grassType/Spring/grass.png);
+}
+
+/* Winter */
+.eagle.grassWinter{
+	background-image: url(img/others/eagle.png), url(img/grassType/Winter/grass.png);
+}
+
+.eagle.grassWinter.rockWinter{
+	background-image: url(img/others/eagle.png), url(img/grassType/Winter/rock.png), url(img/grassType/Winter/grass.png);
+}
+
+.eagle.grassWinter.treeWinter{
+    background-image: url(img/others/eagle.png), url(img/grassType/Winter/tree.png), url(img/grassType/Winter/grass.png);
+}
+
+/* Fall */
+.eagle.grassFall{
+	background-image: url(img/others/eagle.png), url(img/grassType/Fall/grass.png);
+}
+
+.eagle.grassFall.rockFall{
+	background-image: url(img/others/eagle.png), url(img/grassType/Fall/rock.png), url(img/grassType/Fall/grass.png);
+}
+
+.eagle.grassFall.treeFall{
+    background-image: url(img/others/eagle.png), url(img/grassType/Fall/tree.png), url(img/grassType/Fall/grass.png);
+}
+
+/* * ============================================= */
+/* *                  RIVER
+/* * ============================================= */
+.eagle.river{
+	background-image: url(img/others/eagle.png), url(img/riverType/river.png);
+}
+
+.eagle.river.wood{
+	background-image: url(img/others/eagle.png), url(img/riverType/wood.png), url(img/riverType/river.png);
+}
+
+.eagle.river.crocodile{
+    background-image: url(img/others/eagle.png), url(img/riverType/crocodile.png), url(img/riverType/river.png);
+}
+
+/* * ============================================= */
+/* *                  SWAMP
+/* * ============================================= */
+/* Generale */
+.eagle.swamp{
+	background-image: url(img/others/eagle.png), url(img/swampType/swamp.png);
+}
+
+.eagle.swamp.lilypad{
+    background-image: url(img/others/eagle.png), url(img/swampType/lilypad.png), url(img/swampType/swamp.png);
+}
+
+/* * ============================================= */
+/* *                   ROAD
+/* * ============================================= */
+/* Generale */
+.eagle.road{
+	background-image: url(img/others/eagle.png), url(img/roadType/road.png);
+}
+
+.eagle.road.car{
+	background-image: url(img/others/eagle.png), url(img/roadType/car.png), url(img/roadType/road.png);
+}
+
+.eagle.road.jeep{
+	background-image: url(img/others/eagle.png), url(img/roadType/jeep.png), url(img/roadType/road.png);
+}
+
+.eagle.road.bus{
+	background-image: url(img/others/eagle.png), url(img/roadType/bus.png), url(img/roadType/road.png);
+}
+
+.eagle.road.camion1{
+	background-image: url(img/others/eagle.png), url(img/roadType/camion1.png), url(img/roadType/road.png);
+}
+
+.eagle.road.camion2{
+	background-image: url(img/others/eagle.png), url(img/roadType/camion2.png), url(img/roadType/road.png);
+}
+
+/* * ============================================= */
+/* *                   RAIL
+/* * ============================================= */
+/* ! semaforo */
+.eagle.rail{
+    background-image: url(img/others/eagle.png), url(img/railType/rail.png);
+}
+
+.eagle.rail.train1{
+    background-image: url(img/others/eagle.png), url(img/railType/train1.png), url(img/railType/rail.png);
+}
+
+.eagle.rail.train2{
+    background-image: url(img/others/eagle.png), url(img/railType/train2.png), url(img/railType/rail.png);
+}
+
+.eagle.rail.train3{
+    background-image: url(img/others/eagle.png), url(img/railType/train3.png), url(img/railType/rail.png);
+}
+
+
+
+/* Schermata di fine gioco */
+.endGameScreen, .gamePaused{
+    text-align: center;
+	background-color: rgba(241, 117, 78, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+    gap: 12px;
+}
+
+.gamePaused{
+    background-color: #bfbfbfb3;
+}
+
+.adScreen{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.CoppaDelRe{
+    background-image: url(img/ads/CoppaDelRe.png);
+}
+
+.adFinished{
+    position: absolute;
+    top: 0;
+    left: 0;
+	right: 0;
+	bottom: 0;
+    background-color: #4b8db8e3;
+
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+    gap: 12px;
+}
+
+.adCountDown, .cross{
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    border: 2px solid #001732;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+a{
+    position: absolute;
+    bottom: 10vmax;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #001732;
+    background-color: #d8eee8;
+    padding: 0 15px 4px;
+    border: 2px solid #001732;
+}
+
+.adCountDown{
+    font-size: 37px;
+    text-align: center;
+}
+
+.cross{
+    background-image: url(img/menu/cross.png);
+}
+
+.win{
+	background-color: rgba(78, 241, 187, 0.6);
+}
+
+.endGameText{
+    text-align: center;
+	font-size: 48px;
+	line-height: 1.2;
+	font-family: 'Press Start 2P', cursive;
+	margin-bottom: 16px;
+}
+
+button{
+	border: 2px solid rgb(0, 23, 50);
+	font-size: 24px;
+	font-family: 'Darker Grotesque', sans-serif;
+	padding: 4px 20px 8px 20px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: rgb(203, 224, 221);
+}
+
+
+
+/* * ============================================================================================== */
+/* *                                     ADATTAMENTO DEVICES
+/* * ============================================================================================== */
+@media only screen and (max-width: 1000px){
+    h1{
+        font-size: 78px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .initial{
+        width: 80vw;
+    }
+
+    .image{
+        width: 100%;
+        height: 300px;
+    }
+
+    .button{
+        width: 70px;
+        height: 70px;
+    }    
+
+    .difficulty, .playButton{
+        font-size: 40px;
+        height: 70px;
+        line-height: 58px;
+    }
+
+    .scoreBox{
+        font-size: 50px;
+    }
+
+    .gameContainer{
+        width: 100vw;
+    }
+
+    .lifePanel{
+        margin: 16px 0;
+    }
+
+    .heart{
+        width: 62px;
+        height: 62px;
+    }
+
+    .menuOption{
+        height: 60px;
+        padding: 5px;
+    }
+
+    .adCountDown, .cross{
+        width: 100px;
+        height: 100px;
+        top: 40px;
+        right: 40px;
+    }
+
+    .adCountDown{
+        font-size: 63px;
+    }
+
+    a{
+        font-size: 70px;
+    }
+
+    .coinImage{
+        background-size: contain;
+        margin-right: 10px;
+    }
+
+    .text, .endGameText{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 90px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .playAgain{
+        width: 320px;
+        height: 80px;
+        font-size: 40px;
+    }
+}
+
+
+
+/* * ============================================================================================== */
+/* *                                           ALTRO
+/* * ============================================================================================== */
+.hidden{
+	display: none;
+}
+
+.reverse{
+	transform: scaleX(-1);
+}
+
+/*
+COLOR PALETTE
+  black: #001732;
+  orange: #f1754e;
+  lightgreen: #4ef1bb;
+  bg-color: #d8eee8;
+  bg-dark-color: #cbe0dd;
+  clicked-cell: #9dc5c7;
+  river: #87cefa
+*/

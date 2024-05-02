@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+  	<head>
+
+		<title>Ducker</title>
+		<link rel="icon" href="img/charStanding.png">
+
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+		<!-- Foglio di stile -->
+		<link rel="stylesheet" href="./ducker.css">
+	</head>
+
+  	<body>
+
+		<!-- Schermata iniziale -->
+        <div class="initial">
+            <h1>DUCKER</h1>
+            <div class="image">
+				<div class="chooseCharacter">
+					<div class="arrow" id="leftArrow"></div>
+					<div class="imagePlaceHolder">
+						<img src="./img/characters/duck/walk.gif">
+					</div>
+					<div class="arrow" id="rightArrow"></div>
+				</div>
+                <div class="button soundButton soundOff"></div>
+                <div class="button heartButton"></div>
+            </div>
+            <div class="box">
+                <div id="easy" class="difficulty">EASY</div>
+                <div id="normal" class="difficulty">NORMAL</div>
+                <div id="hard" class="difficulty">HARD</div>
+            </div>
+            <div class="playButton">GIOCA</div>
+        </div>
+
+		<!-- Monete -->
+		
+
+		<div class="gameContainer hidden">
+
+			<!-- Pannello informazioni di gioco -->
+			<div class="gamePanel">
+				<h1>Ducker</h1>
+
+				<!-- Punteggio -->
+				<div class="scoreBox">
+					<div class="coinBox">
+						<div class="coinImage"></div>
+						<span class="coinCounter">0</span>
+					</div>
+					<span class="scoreCounter">00000</span>
+				</div>
+			</div>
+
+			<!-- Tabellone di gioco -->
+			<div class="gameBoard">
+				<div class="grid">
+				<!-- Qui ci saranno le celle -->
+				</div>
+
+				<!-- Game Paused -->
+                <div class="gamePaused hidden">
+                    <div class="text">GAME<br>PAUSED</div>
+                </div>
+
+				<!-- Schermata di fine gioco -->
+				<div class="endGameScreen hidden">
+					<h2 class="endGameText">GAME<br>OVER</h2>
+					<button class="playAgain">GIOCA ANCORA</button>
+				</div>
+			</div>
+
+			<!-- Vite -->
+			<div class="lifePanel hidden">
+				<div class="heart"></div>
+				<div class="heart"></div>
+				<div class="heart"></div>
+			</div>
+
+			<!-- Menu -->
+            <div class="box">
+                <div class="menuOption pause"></div>
+                <div class="menuOption home"></div>
+            </div>
+		</div>
+
+		<!-- Pubblicità -->
+		<div class="adScreen hidden">
+			<div class="adFinished hidden"></div>
+			<div class="adCountDown"></div>
+			<div class="cross hidden"></div>
+		</div>
+			
+		<script src="./ducker.js"></script>
+	</body>
+
+</html>
