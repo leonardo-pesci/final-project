@@ -1,13 +1,24 @@
+/*^ General  */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+:root {
+    --color-nav: #6b45cb;
+    --color-primary: #8367C7;
+    --color-sec: #B3E9C7;
+    --color-ter: #C2F8CB;
+    --color-btn: #FFBA49;
+    --color-bg: #F0FFF1;
+    --color-text: #000000;
+}
+
 html {
     font-size: 16px;
     font-family: "Rubik", sans-serif;
-    background-color: #F0FFF1;
+    background-color: var(--color-bg);
 }
 
 .container-fluid {
@@ -18,7 +29,7 @@ html {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .cob {
@@ -28,7 +39,7 @@ html {
 }
 
 header {
-    background-color: #6b45cb;
+    background-color: var(--color-nav);
     border-bottom: 0;
 }
 
@@ -37,39 +48,11 @@ header {
 }
 
 #mainHero {
-    background-color: #C2F8CB;
+    background-color: var(--color-ter);
 }
 
-#box1 {
-    background-color: #C2F8CB;
-}
 
-#box2 {
-    background-color: #fff;
-}
-
-#box3 {
-    background-color: #C2F8CB;
-}
-
-/*
-COLOR PALETTE
-5603AD
-8367C7
-B3E9C7
-C2F8CB
-F0FFF1
-
-
-
-
-*/
-
-
-
-
-
-
+/*^ Album */
 .albumItem {
 
 }
@@ -79,8 +62,8 @@ F0FFF1
 }
 
 .albumItemBtn {
-    background-color: #FFBA49;
-    border: 1px solid #000000;
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-text);
 }
 
 
@@ -93,9 +76,4 @@ F0FFF1
 
 .pointer {
     cursor: pointer;
-}
-
-#games {
-    height: 1000px;
-    background-color: blanchedalmond;
 }
