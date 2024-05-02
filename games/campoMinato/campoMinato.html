@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./campoMinato.css">
+
+        <!-- Titolo e favicon -->
+        <title>Campo minato vv1.12.1</title>
+        <link rel="icon" href="./img/bomb.png" type="image/png"> 
+    </head>
+
+    <body>
+
+        <!-- Schermata iniziale -->
+        <div class="initial">
+            <h1>CAMPO MINATO</h1>
+            <div class="image">
+                <img src="./img/bomb.png" alt="">
+                <div class="button clockButton"></div>
+                <div class="button treasureButton"></div>
+            </div>
+            <div class="box">
+                <div id="easy" class="difficulty">EASY</div>
+                <div id="normal" class="difficulty">NORMAL</div>
+                <div id="hard" class="difficulty">HARD</div>
+            </div>
+            <div class="playButton">GIOCA</div>
+        </div>
+
+        <div class="gameContainer hidden">
+
+            <!-- Pannello di gioco -->
+            <header>
+
+                <h1>Campo Minato</h1>
+
+                <!-- Punteggio -->
+                <div class="score">
+                    <div class="scoreTitle">SCORE</div>
+                    <div class="scoreCounter">00000</div>
+                </div>
+
+                <!-- Tempo -->
+                <div class="time">
+                    <div class="timeTitle">TIME</div>
+                    <div class="timeCounter">00000</div>
+                </div>
+
+            </header>
+
+            <!-- Tabellone di gioco -->
+            <main class="gameBoard">
+
+                <div class="grid">
+                </div>
+
+                <!-- Game Paused -->
+                <div class="gamePaused hidden">
+                    <div class="text">GAME<br>PAUSED</div>
+                </div>
+
+                <!-- Game Over -->
+                <div class="gameOver hidden">
+    
+                    <h2 class="text">GAME<br>OVER</h2>
+                    <button class="replay">GIOCA ANCORA</button>
+
+                </div>
+
+                <!-- Win -->
+                <div class="win hidden">
+    
+                    <h2 class="text">YOU<br>WIN</h2>
+                    <button class="replay">GIOCA ANCORA</button>
+
+                </div>
+                
+            </main>
+
+            <!-- Flag -->
+            <div class="flagContainer">
+                <div class="flagBox">
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="box">
+                <div class="menuOption pause"></div>
+                <div class="menuOption home"></div>
+            </div>
+
+        </div>
+        
+        <!-- Javascript -->
+        <script type="text/Javascript" src="./campoMinato.js"></script>
+
+    </body>
+</html>
