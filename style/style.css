@@ -1,4 +1,4 @@
-/*^ General  */
+/*^ GENERAL  */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -21,6 +21,22 @@ html {
     background-color: var(--color-bg);
 }
 
+/*^ CONTROL CLASSES */
+.hidden {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fitImg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*^ MAIN */
 .container-fluid {
     --bs-gutter-x: 0
 }
@@ -52,7 +68,13 @@ header {
 }
 
 
-/*^ Album */
+/*^ ALBUM */
+.album .container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .albumItem .card{
     border-radius: 10px;
     overflow: hidden;
@@ -87,24 +109,16 @@ header {
     background-image: url(./../img/starFull.png);
 }
 
-/*^ Album Thumbnail */
+/*^ THUMBNAILS */
 #morra {
     background-image: url(./../img/morra.png);
 }
 
-
-
-/*^ Control classes */
-.hidden {
-    display: none;
+#memory {
+    background-image: url(./../img/memory.png);
 }
 
-.pointer {
-    cursor: pointer;
+#digita {
+    background-image: url(./../img/digita.png);
 }
 
-.fitImg {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}

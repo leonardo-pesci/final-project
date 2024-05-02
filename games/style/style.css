@@ -58,7 +58,7 @@ body {
 }
 
 .border-bottom {
-    border-bottom: 1px solid #0F110C !important;
+    border-bottom: 1px solid var(--color-primary) !important;
 }
 
 /* gameContainer */
@@ -185,14 +185,6 @@ body {
     border-radius: 15px;
     padding: 4px 15px;
 }
-
-.hidden {
-    display: hidden !important;
-} /* ! non funziona */
-
-.disabled {
-    cursor: not-allowed !important;
-} /* ! non funziona */
 
 @media screen and (max-width: 991px) {
     header {
