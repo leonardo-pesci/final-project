@@ -56,6 +56,12 @@ header {
 .albumItem .card{
     border-radius: 10px;
     overflow: hidden;
+    height: 370px;
+}
+
+.albumImg {
+    width: 100%;
+    height: 225px;
 }
 
 .albumItemTitle {
@@ -81,6 +87,10 @@ header {
     background-image: url(./../img/starFull.png);
 }
 
+/*^ Album Thumbnail */
+#morra {
+    background-image: url(./../img/morra.png);
+}
 
 
 
