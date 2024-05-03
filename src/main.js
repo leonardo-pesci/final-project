@@ -40,8 +40,7 @@ navBtn.forEach( (btn) => {
     btn.addEventListener('click', () => {
         let item = btn.innerText
         let lowerItem = item.toLowerCase()
-        let list = ['home', 'games', 'tools', 'about', 'contacts']
-
+        
         mainSections.forEach( (section) => {
             section.classList.add('hidden')
         })
