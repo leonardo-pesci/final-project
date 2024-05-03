@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/logo.png" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chi vuol essere milionario?</title>
+    </head>
+
+    <body class="">
+        
+        <!-- Home -->
+        <div class="home">
+            
+            <header>
+                <h1>Chi vuol essere MILIONARIO?</h1>
+                <h2>Premi "avvia" per iniziare la partita</h2>
+            </header>
+
+            <div class="principale">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="bottone">
+                    <button class="startButton">AVVIA</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Difficolta -->
+        <div class="difficolta hidden">
+            <div class="difficultyMegaBox">
+                <div class="difficultyBox">
+                    <div class="difficulty">Facile</div>
+                    <div class="difficulty">Media</div>
+                    <div class="difficulty">Difficile</div>
+                    <div class="difficulty">Esperta</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading hidden">
+            <div class="contGif">
+                <img src="img/loading.gif" alt="">
+            </div>
+
+        </div>
+
+        <div id="placeHolder"></div>
+
+        <!-- Level -->
+        <template class="levelTemplate">
+
+            <div class="level">
+                <div class="punteggio"></div>
+                <div class="levelImage">
+                    <img src="img/logo.png" alt="">
+                </div>
+
+                <div class="aiuti">
+                    <div class="aiuto cinquanta">
+                        <img src="img/slash.png" alt="" class="usato hidden">
+                    </div>
+                    <div class="aiuto chiamata">
+                        <img src="img/slash.png" alt="" class="usato hidden">
+                    </div>
+                    <div class="aiuto pubblico">
+                        <img src="img/slash.png" alt="" class="usato hidden">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="levelQuestion">
+                        <p></p>
+                    </div>
+
+                    <div class="levelOptions"></div>
+
+                </div>
+                <!-- <div class="punteggio"></div> -->
+
+            </div>
+
+        </template>
+
+        <template class="prizesTemplate">
+            <div class="montepremiMegaBox">
+                <div class="montepremi">
+                    <div class="premio">1 0</div>
+                    <div class="premio">2 500</div>
+                    <div class="premio">3 1.000</div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                    <div class="premio"></div>
+                </div>
+            </div>
+
+        </template>
+
+        <!-- Game over -->
+        <template class="gameoverTemplate">
+
+            <div class="megaBox">
+                <div class="box">
+                    <div class="emoji">😭</div> 
+                    <h1 class="title">Hai perso!</h1>
+                    <p class="description">Ci vuole solo coraggio, o forse buon senso, per capire che le lezioni migliori sono di solito le più dure; e che spesso fra queste ultime c'è la sconfitta. A loro volta, queste riflessioni inducono a pensare che l'unico vero fallimento stia, in realtà, nel permettere alla sconfitta di avere la meglio su di noi. (Anthony Clifford Grayling)
+
+                    </p>
+                    <button class="rigioca">Rigioca</div>
+                </div>
+            </div>
+
+        </template>
+
+        <template class="victoryTemplate">
+
+            <div class="megaBox">
+                <div class="box">
+                    <div class="emoji">🏆</div> 
+                    <h1 class="title">Hai vinto!</h1>
+                    <p class="description">Una vittoria senza merito non è una vittoria. (Arrigo Sacchi)
+
+                    </p>
+                    <button class="rigioca">Rigioca</div>
+                </div>
+            </div>
+        </template>
+
+        <script src="script.js"></script>
+    </body>
+</html>
