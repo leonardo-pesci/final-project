@@ -193,6 +193,18 @@ html {
     background-image: url(./../img/stickerStacker.png);
 }
 
+#toDoList {
+    background-image: url(./../img/toDoList.png);
+}
+
+#traduttore {
+    background-image: url(./../img/traduttore.png);
+}
+
+#meteo {
+    background-image: url(./../img/meteo.png);
+}
+
 /*^ Features */
 
 
