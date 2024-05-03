@@ -4,7 +4,6 @@ const OPENAI = {
     URL: "https://api.openai.com/v1/chat/completions",
     MODEL: "gpt-3.5-turbo",
     CONTENT_TYPE: "application/json",
-    KEY: "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",
     TEMPERATURE: 1.2
 }
 
