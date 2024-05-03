@@ -83,7 +83,7 @@ html {
 #heroImg {
     width: 500px;
     height: 500px;
-    background: red;
+    background: var(--color-nav);
 }
 
 
@@ -177,6 +177,16 @@ html {
     background-image: url(./../img/stickerStacker.png);
 }
 
+
+/*^ Footer */
+#mainFooter {
+    width: 100%;
+    background-color: var(--color-nav);
+}
+
+
+
+/*^ Placeholder  */
 .placeholder {
     width: 100%;
     height: 146.53px;

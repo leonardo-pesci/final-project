@@ -85,7 +85,6 @@ async function setLevel(diffSelected){
     // svuoto il placeHolder
     placeHolder.innerHTML = null
 
-    console.log(diffSelected)
     // preparo le istruzioni per GPT
     let prompt = `Voglio che ti comporti come se fossi il gioco "chi vuol essere milionario di Gerry Scotti". Io sarò il concorrente. Non fare riferimento a te stesso. Ogni domanda sarà composta da massimo 90 caratteri e sarà seguita da una array di esattamente 4 opzioni (devono essere esattamente 4, ciascuna opzione deve avere un massimo di 25 caratteri), solo una di queste opzioni è corretta e porta al livello successivo. Devi restituirmi un indice, compreso da 1 a 4, che indicherà la risposta corretta. Ad esempio, se l'opzione corretta è la numero 2, l'indice deve essere 2. La posizione dell'opzione corretta deve essere casuale. Le opzioni devono essere esattamente 4. Gli argomenti delle domande sono: cultura generale, musica, sport, cinema, storia, geografia. La difficoltà delle domande deve essere ${diffSelected}. La tua risposta deve essere solo in formato JSON.
 
