@@ -1,0 +1,485 @@
+/* star rules */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* general */
+html{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Ysabeau SC', sans-serif;
+    color: black;
+    background-image: url(img/sfondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: 400;
+    text-align: center;
+}
+
+body{
+    position: relative;
+}
+
+/* home */
+header{
+    color: white;
+    background: radial-gradient(farthest-side, #727272, #422b05);
+    border-bottom: 4px solid aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.logo img{
+    width: 80%;
+    max-width: 400px;
+}
+
+header h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header h2{
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.startButton, .rigioca{
+    font-size: 20px;
+    border-radius: 40px;
+    color: white;
+    background: radial-gradient(closest-side, #727272, #422b05);
+    border: 0;
+    padding: 6px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* gamestarted */
+.gameStarted header h1{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 12px;
+}
+
+.gameStarted header h2{
+    display: none;
+}
+
+.gameStarted .principale{
+    display: none;
+}
+
+/* menu */
+.menu{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.menuBox{
+    width: 100vw;
+    position: relative;
+    top: 260px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.numMazzi{
+    color: white;
+    font-size: 14px;
+}
+
+.unoButton, .dueButton{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+    background: radial-gradient(closest-side, #727272, #422b05);
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.8;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.bar{
+    margin: 20px auto;
+}
+
+.bar:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.player{
+    color: #024c27;
+    width: 200px;
+    height: auto;
+    border-radius: 18px;
+    padding: 6px 10px;
+    float: left;
+    overflow: auto;
+}
+
+.add, .confirm{
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 3px;
+    cursor: pointer;
+    float: left;
+    overflow: auto;
+    border: solid 2px gray;
+    line-height: 1.4;
+}
+
+.errorMessage{
+    color: white;
+    background-color: rgba(249, 23, 23, 0.576);
+    padding: 6px;
+    border: 2px solid #808080;
+}
+
+.list{
+    width: 270px;
+    position: relative;
+    top: 260px;
+    margin: auto;
+}
+
+.listElement{
+    color: #024c27;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    margin-right: 6px;
+    line-height: 1.4;
+    padding: 0 8px;
+    float: left;
+}
+
+.cross{
+    width: 22.4px;
+    height: 22.4px;
+    display: inline-block;
+    color: red;
+    margin-bottom: 4px;
+    border-radius: 50%;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.lingue{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 60px;
+    position: fixed;
+    bottom: 15px;
+}
+
+.lingua{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.italiano{
+    background-image: url(img/lingua/italia.png);
+}
+
+.inglese{
+    background-image: url(img/lingua/ing.png);
+}
+
+.spagnolo{
+    background-image: url(img/lingua/spagna.png);
+}
+
+.romano{
+    background-image: url(img/lingua/roma.png);
+}
+
+.napoletano{
+    background-image: url(img/lingua/napoli.png);
+}
+
+.selected{
+    opacity: 1;
+}
+
+/* loading */
+.contGif{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.contGif img{
+    width: 80%;
+    max-width: 280px;
+}
+
+/* extraction */
+.conteggioK{
+    color: white;
+    width: 67.6px;
+    height: 100px;
+    background-image: url(img/dorso.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 28px;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    top: 79px;
+
+}
+
+.conteggioKText{
+    position: absolute;
+    top: 26px;
+    right: 19px;
+}
+
+.container{
+    max-width: 500px;
+    height: 100%;
+    padding: 0 8px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    position: relative;
+}
+
+.conteggio{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.cardImage{
+    width: 152px;
+    height: 203px;
+    border-radius: 10px;
+}
+
+.cardImage img{
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+}
+
+.extractionText{
+    width: 80%;
+    font-size: 20px;
+    color: white;
+    background: radial-gradient(closest-side, #727272, #422b05);
+    box-sizing: content-box;
+    padding: 15px 8px;
+    border-radius: 20px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extractionText p{
+    padding: auto;
+    margin: auto;
+}
+
+.next{
+    font-weight: 700;
+    width: 25%;
+    font-size: 20px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.playerName{
+    color: white;
+    font-size: 20px;
+}
+
+.buttonContainer{
+    width: 100vw;
+    max-width: 500px;
+    bottom: 0;
+    margin: auto;
+    position: relative;
+}
+
+.buttonContainer div{
+    width: 28px;
+    height: 28px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.questionMark{
+    font-size: 22px;
+    line-height: 1.1;
+    left: 20px;
+}
+
+.edit{
+    font-size: 20px;
+    line-height: 1.15;
+    right: 20px;
+}
+
+/* guide */
+.guide{
+    position: fixed;
+    top: 115px;
+    bottom: 40px;
+    left: 35px;
+    right: 35px;
+    max-width: 500px;
+    margin: auto;
+    background: radial-gradient(closest-side, #727272, #422b05);
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.exit{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+.guideBox{
+    margin: 48px 8px;
+    text-align: left;
+    font-weight: 200;
+    color: white;
+    height: 90%;
+    overflow: scroll;
+}
+
+.cardGuide{
+    display: block;
+    margin-bottom: 15px;
+    text-indent: 12px;
+}
+
+/* edit */
+.editPage{
+    position: fixed;
+    top: 115px;
+    bottom: 40px;
+    left: 35px;
+    right: 35px;
+    max-width: 500px;
+    margin: auto;
+    background: radial-gradient(closest-side, #727272, #422b05);
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.editPage span{
+    color: white;
+    display: block;
+    margin: 15px;
+}
+
+.exitEdit{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+/* gameFinished */
+.megaBox{
+    margin: 110px auto 20px;
+    padding: 20px;
+}
+
+.box{
+    max-width: 450px;;
+    font-size: 18px;
+    padding: 20px;
+    border: 2px solid #fbfb43;
+    margin: auto
+}
+
+.emoji{
+    font-size: 40px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 500px;    
+}
+
+/* funzionalità */
+.hidden{
+    display: none
+}

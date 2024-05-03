@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./coppaDelRe.css">
+        <link rel="icon" href="img/logo.png" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La coppa del re</title>
+    </head>
+
+    <body class="">
+
+        <!-- Home -->
+        <div class="home">
+            
+            <header>
+                <h1>La coppa del re</h1>
+                <h2>Premi "avvia" per iniziare la partita</h2>
+            </header>
+
+            <div class="principale">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="bottone">
+                    <button class="startButton">AVVIA</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Menu -->
+        <div class="menu hidden">
+            <div class="menuBox">
+                <div class="numMazzi">numero di mazzi</div>
+                <div class="buttons">
+                    <div class="unoButton selected">1</div>
+                    <div class="dueButton">2</div>
+                </div>
+                <div class="bar">
+                    <input type="text" placeholder="Inserisci il nome del giocatore" name="enter" class="player">
+                    <div class="add">✚</div>
+                    <div class="confirm">➤</div>
+                </div>
+                <div class="errorMessage hidden">
+                    <h4>errore!</h4> <br>
+                    <span>clicca prima il pulsante "+"</span>
+                </div>
+            </div>
+            <div class="list"></div>
+            <div class="lingue">
+                <div class="lingua italiano selected"></div>
+                <div class="lingua inglese"></div>
+                <div class="lingua spagnolo"></div>
+                <div class="lingua romano"></div>
+                <div class="lingua napoletano"></div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading hidden">
+            <div class="contGif">
+                <img src="./img/loading.gif" alt="">
+            </div>
+
+        </div>
+
+        <!-- Placeholder -->
+        <div id="placeHolder"></div>
+
+        <!-- Extraction -->
+        <template class="extractionTemplate">
+
+            <div class="conteggioK">
+                <div class="conteggioKText">4K</div>
+            </div>
+            <div class="container">
+                <div class="conteggio">51</div>
+                <div class="cardImage"></div>
+
+                <div class="extractionText">
+                    <p>re di cuori</p>
+                </div>
+
+                <div class="next">
+                    estrai
+                </div>
+
+                <div class="playerName">
+                    pippo
+                </div>
+                
+            </div>
+            <div class="buttonContainer">
+                <div class="questionMark">﹖</div>
+                <div class="edit">✎</div>
+            </div>
+            
+        </template>
+
+        <!-- Guide -->
+        <div class="guide hidden">
+            <div class="exit">✗</div>
+            <div class="guideBox">
+                
+
+            </div>
+        </div>
+
+        <!-- Edit -->
+        <div class="editPage hidden">
+            <div class="exitEdit">✗</div>
+                <span>Coming soon...</span>
+            </div>
+        </div>
+
+        <!-- Gamefinished -->
+        <template class="gameFinishedTemplate">
+
+            <div class="megaBox">
+                <div class="box">
+                    <div class="emoji">🏆</div> 
+                    <h1 class="title"></h1>
+                    <button class="rigioca">Rigioca</div>
+                </div>
+            </div>
+        </template>
+
+        <script src="./coppaDelRe.js"></script>
+    </body>
+</html>
