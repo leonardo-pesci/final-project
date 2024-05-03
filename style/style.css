@@ -78,12 +78,28 @@ html {
 
 #mainHero {
     background-color: var(--color-ter);
+    padding: 80px !important;
+}
+
+#heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#heroText h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 
 #heroImg {
     width: 500px;
     height: 500px;
-    background: var(--color-nav);
+    background: var(--color-primary);
 }
 
 
@@ -177,11 +193,15 @@ html {
     background-image: url(./../img/stickerStacker.png);
 }
 
+/*^ Features */
+
 
 /*^ Footer */
 #mainFooter {
     width: 100%;
     background-color: var(--color-nav);
+    padding: 10px;
+    margin: 0;
 }
 
 
@@ -196,5 +216,10 @@ html {
 @media only screen and (max-width: 471px) {
     .placeholder {
         height: 186.53px;
+    }
+
+    #mainHero {
+        padding: 10px !important;
+        margin: 0;
     }
 }

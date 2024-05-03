@@ -17,6 +17,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -53,9 +54,9 @@
             <!-- Home -->
             <section id="home" class="mainSection">
                 <div id="mainHero" class="row featurette p-5">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-                      <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                    <div id="heroText" class="col-md-7">
+                      <h2 class="featurette-heading fw-normal lh-1">Condividi i tuoi progetti. <span class="text-body-secondary">Con tutto il mondo.</span></h2>
+                      <p class="lead">Divertiti e confrontati con altre migliaia di programmatori.</p>
                     </div>
                     <div class="col-md-5">
                       <div id="heroImg" class="d-flex justify-content-center align-items-center">
@@ -246,6 +247,50 @@
                     </div>
                 </div>
 
+                <!-- Features -->
+                <div id="features" class="section container px-4 py-3">
+                    <h2 class="pb-2 border-bottom">Perché giocare con noi</h2>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                        <div class="col d-flex align-items-start">
+                            <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0F110C" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="fs-3 text-body-emphasis">Gioca ovunque</h3>
+                                <p>Gioca quando e dove vuoi, con un solo click</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                            <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0F110C" class="bi bi-floppy" viewBox="0 0 16 16">
+                                    <path d="M11 2H9v3h2z"/>
+                                    <path d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v4.5A1.5 1.5 0 0 1 11.5 7h-7A1.5 1.5 0 0 1 3 5.5V1H1.5a.5.5 0 0 0-.5.5m3 4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V1H4zM3 15h10v-4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z"/>
+                                </svg>
+                                
+
+                            </div>
+                            <div>
+                                <h3 class="fs-3 text-body-emphasis">Non perdi nulla</h3>
+                                <p>Crea un account per salvaguardare tutti i tuoi progressi</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                            <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0F110C" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                    <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="fs-3 text-body-emphasis">Novità</h3>
+                                <p>Un nuovo gioco ogni settimana!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- Tools -->
@@ -264,9 +309,51 @@
             </section>
 
             <!-- Footer -->
-            <footer id="mainFooter" class="fixed-bottom">
-                Footer
-            </footer>
+            <footer id="mainFooter" class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col mb-3">
+                  <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <img class="controller" src="./img/controller.png" alt="">
+                  </a>
+                  <p class="text-body-secondary">2024</p>
+                </div>
+            
+                <div class="col mb-3">
+            
+                </div>
+            
+                <div class="col mb-3">
+                  <h5>Other</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                  </ul>
+                </div>
+            
+                <div class="col mb-3">
+                  <h5>Section</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                  </ul>
+                </div>
+            
+                <div class="col mb-3">
+                  <h5>Language</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Italiano</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">English</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Español</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Français</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Deutsch</a></li>
+                  </ul>
+                </div>
+              </footer>
 
         </div>
 
