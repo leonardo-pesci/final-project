@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./chatVenture.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatVenture</title>
+    </head>
+    <body>
+        <!-- Home -->
+        <div class="home">
+            <header>
+                <h1>Chatventure</h1>
+                <h2>Scegli il tema della tua storia</h2>
+            </header>
+
+            <div class="principale">
+                <div class="contenitore">
+                    <div class="tema" data-genere="paranormale">👻</div>
+                    <div class="tema" data-genere="spionaggio">🕵🏻‍♂️</div>
+                    <div class="tema" data-genere="supereroi">🦸🏻</div>
+                    <div class="tema" data-genere="thriller">🔪</div>
+                    <div class="tema" data-genere="fantasia">🧚🏻‍♀️</div>
+                    <div class="tema" data-genere="medievale">🏰</div>
+                    <div class="tema" data-genere="pirata">🏴‍☠️</div>
+                    <div class="tema" data-genere="animali">🦁</div>
+                    <div class="tema" data-genere="futuristico">🛸</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Loading -->
+        <div class="loading hidden">
+            <header>
+                <h2>Chatventure</h2>
+            </header>
+
+            <div class="cont-gif">
+                <img src="./img/loader.gif" alt="">
+            </div>
+
+        </div>
+
+        <div id="placeholder"></div>
+
+        <!-- Level -->
+        <template class="level-template">
+
+            <header class="punteggio">
+                <h2>Chatventure</h2>
+            </header>
+            <div class="level">
+                <div class="level-image"></div>
+                <div class="level-description"></div>
+                <div class="level-actions">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <!-- <div class="punteggio"></div> -->
+
+            </div>
+        </template>
+
+
+        <!-- Game over -->
+        <template class="gameover-template">
+
+            <div class="gameover">
+                <header>
+                    <h2>ChatVenture</h2>
+                </header>
+
+                <div class="dead-box">
+                    <div class="teschio">☠️</div>
+                    <h1 class="morto">Sei morto!</h1>
+                    <p class="death-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio blanditiis laboriosam animi, fugit veritatis ratione aut. Accusantium reiciendis repudiandae nostrum?</p>
+                    <BUTTON class="rigioca">Rigioca</div>
+                </div>
+            </div>
+
+        </template>
+
+        <template class="victory-template">
+
+            <div class="gameover">
+                <header>
+                    <h2>ChatVenture</h2>
+                </header>
+
+                <div class="dead-box">
+                    <div class="teschio">🏆</div>
+                    <h1 class="morto">Hai vinto!</h1>
+                    <p class="death-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio blanditiis laboriosam animi, fugit veritatis ratione aut. Accusantium reiciendis repudiandae nostrum?</p>
+                    <BUTTON class="rigioca">Rigioca</div>
+                </div>
+            </div>
+
+        </template>
+
+        <script src="./chatVenture.js"></script>
+    </body>
+</html>
