@@ -105,7 +105,13 @@ let startGame = () => {
 
     wordButton.classList.remove('disabled')
     wordInput.disabled = false;
+
+    wordInput.focus()
     selectWord()
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Enter') checkWord()
+    })
 }
 
 let reduceTime = () => {
@@ -143,6 +149,3 @@ let selectWord = () => {
 
 /* Events */
 document.addEventListener('click', startGame)
-document.addEventListener('keydown', (e) => {
-    if (e.code === 'Enter') checkWord()
-})
