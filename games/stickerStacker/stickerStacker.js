@@ -137,15 +137,15 @@ function onStack(){
         endGameScreen.classList.remove('hidden')
     }else{
         updateScore()
-    }
-
-    // check win
-    if (currentRowIndex === 0){
-        gameOver = true
-        clearInterval(t)
-        endGameScreen.classList.remove('hidden')
-        endGameScreen.classList.add('win')
-        endGameText.innerHTML = 'YOU<br>WON!'
+        
+        // check win
+        if (currentRowIndex === 0){
+            gameOver = true
+            clearInterval(t)
+            endGameScreen.classList.remove('hidden')
+            endGameScreen.classList.add('win')
+            endGameText.innerHTML = 'YOU<br>WON!'
+        }
     }
 
     // change row
