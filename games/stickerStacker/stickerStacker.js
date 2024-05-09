@@ -121,7 +121,7 @@ function updateScore(){
 }
 
 function onStack(){
-    // ! check lost
+    // check lost
     for (let i = 0; i < 6; i++){
         if (currentRowIndex !== gridMatrix.length - 1){
             if (gridMatrix[currentRowIndex][i] === 1 && gridMatrix[currentRowIndex + 1][i] === 0){
@@ -130,6 +130,7 @@ function onStack(){
         }
     }
 
+    // check gameOver
     if(barSize === 0){
         gameOver = true
         clearInterval(t)
@@ -137,8 +138,8 @@ function onStack(){
     }else{
         updateScore()
     }
-    
-    // ! check win
+
+    // check win
     if (currentRowIndex === 0){
         gameOver = true
         clearInterval(t)
@@ -147,9 +148,7 @@ function onStack(){
         endGameText.innerHTML = 'YOU<br>WON!'
     }
 
-    if (gameOver) return
-
-    // ! change row
+    // change row
     currentRowIndex--;
     barGoesRight = true;
 
