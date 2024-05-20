@@ -1,5 +1,7 @@
 // commento inutile
 // gpt
+import OpenAI from 'openai'
+
 const OPENAI = {
     URL: "https://api.openai.com/v1/chat/completions",
     MODEL: "gpt-3.5-turbo",
@@ -344,7 +346,7 @@ function reGame(){
     window.location.reload()
 }
 
-// to do
+// todo
 // rendere gli aiuti monouso
 // chiamata gpt per aiuto da casa
 // chiamata gpt per aiuto dal pubblico
