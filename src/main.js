@@ -39,17 +39,18 @@ let setLastSection = (lastSection) => {
 }
 
 let showSection = (item) => {
-    console.log(item)
-        let lowerItem = item.toLowerCase()
-        
-        mainSections.forEach( (section) => {
-            section.classList.add('hidden')
-        })
+    let lowerItem = item.toLowerCase()
+    
+    mainSections.forEach( (section) => {
+        section.classList.add('hidden')
+    })
 
-        setLastSection(item)
+    setLastSection(item)
 
-        const section = document.querySelector(`#${lowerItem}`)
-        section.classList.remove('hidden')
+    const section = document.querySelector(`#${lowerItem}`)
+
+    console.log(lowerItem)
+    section.classList.remove('hidden')
 }
 
 showSection(lastSection)

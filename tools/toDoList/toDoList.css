@@ -21,6 +21,10 @@ body {
     font-family: Inter, sans-serif;
 }
 
+#placeHolder {
+    background-color: var(--color-bg) !important;
+}
+
 #bigContainer {
     width: 90%;
     max-width: 900px;

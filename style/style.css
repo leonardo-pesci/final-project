@@ -6,13 +6,12 @@
 }
 
 :root {
-    --color-nav: #8367C7;
+    --color-nav: #7053ba;
     --color-primary: #6b45cb;
     --color-sec: #B3E9C7;
-    --color-ter: #C2F8CB;
     --color-quad: #7df58f;
     --color-btn: #FFBA49;
-    --color-bg: #d4f6d7;
+    --color-bg: #C2F8CB;
     --color-text: #000000;
 }
 
@@ -69,7 +68,7 @@ html {
 #mainHeader {
     width: 100%;
     background-color: var(--color-nav);
-    border-bottom: 0;
+    border-bottom: 2px solid var(--color-bg);
 }
 
 #mainHeader nav {
@@ -77,7 +76,7 @@ html {
 }
 
 #mainHero {
-    background-color: var(--color-ter);
+    background-color: var(--color-bg);
     padding: 80px !important;
 }
 
@@ -116,7 +115,7 @@ html {
 }
 
 .albumItem .card{
-    background: radial-gradient(circle, var(--color-ter) 0%, var(--color-quad) 95%);
+    background: radial-gradient(circle, var(--color-bg) 0%, var(--color-quad) 95%);
     border-radius: 10px;
     overflow: hidden;
     height: 370px;
@@ -143,66 +142,66 @@ html {
 .star {
     width: 32px;
     height: 32px;
-    background-image: url(./../img/starEmpty.png);
+    background-image: url(./../img/utility/starEmpty.png);
 }
 
 .starFull {
-    background-image: url(./../img/starFull.png);
+    background-image: url(./../img/utility/starFull.png);
 }
 
 /*^ THUMBNAILS */
 #morra {
-    background-image: url(./../img/morra.png);
+    background-image: url(./../img/games/morra.png);
     position: relative;
     top: 20px;
 }
 
 #memory {
-    background-image: url(./../img/memory.png);
+    background-image: url(./../img/games/memory.png);
     position: relative;
     top: 15px;
 }
 
 #digita {
-    background-image: url(./../img/digita.png);
+    background-image: url(./../img/games/digita.png);
 }
 
 #campoMinato {
-    background-image: url(./../img/campoMinato.png);
+    background-image: url(./../img/games/campoMinato.png);
 }
 
 #ducker {
-    background-image: url(./../img/ducker.png);
+    background-image: url(./../img/games/ducker.png);
     position: relative;
     top: 35px;
 }
 
 #coppaDelRe {
-    background-image: url(./../img/coppaDelRe.png);
+    background-image: url(./../img/games/coppaDelRe.png);
 }
 
 #milionario {
-    background-image: url(./../img/milionario.png);
+    background-image: url(./../img/games/milionario.png);
 }
 
 #chatventure {
-    background-image: url(./../img/chatventure.png);
+    background-image: url(./../img/games/chatventure.png);
 }
 
 #stickerStacker {
-    background-image: url(./../img/stickerStacker.png);
+    background-image: url(./../img/games/stickerStacker.png);
 }
 
 #toDoList {
-    background-image: url(./../img/toDoList.png);
+    background-image: url(./../img/tools/toDoList.png);
 }
 
 #traduttore {
-    background-image: url(./../img/traduttore.png);
+    background-image: url(./../img/tools/traduttore.png);
 }
 
 #meteo {
-    background-image: url(./../img/meteo.png);
+    background-image: url(./../img/tools/meteo.png);
 }
 
 /*^ Features */
@@ -222,9 +221,111 @@ html {
 .placeholder {
     width: 100%;
     height: 146.53px;
-    background-color: var(--color-sec);
+    background-color: var(--color-bg);
+    opacity: 1;
 }
 
+
+
+
+
+/* ^ About */
+#about {
+    width: 100vw;
+    background-color: var(--color-bg);
+    margin: 0;
+}
+
+#aboutBox {
+    background-color: var(--color-2) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2.5vw;
+    border-radius: 20px;
+}
+
+#logoContainer {
+    width: 100%;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    background-image: url(./../img/about/logo.png);
+}
+
+#aboutContent {
+    width: 100%;
+}
+
+.aboutItem {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.aboutItem:last-of-type {
+    margin-bottom: 0;
+}
+
+.aboutItemTitle {
+    text-align: center;
+    font-size: 2.8vw;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 20px;
+}
+
+.aboutItemText {
+    font-size: 1.4vw;
+}
+
+#contactForm {
+    margin-top: 60px;
+    padding: 0;
+}
+
+#contactForm > div {
+    margin-bottom: 10px;
+}
+
+.contactInput::placeholder {
+    color: var(--color-nav);
+}
+
+.inputIcon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.inputIcon img {
+    width: 30px;
+    height: 30px;
+}
+
+#modelBtn, #contactBtn {
+    font-size: 20px;
+    color: var(--color-bg);
+    background-color: var(--color-nav);
+    padding: 6px 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+#contactBtn {
+    width: 100px;
+    padding: 4px 10px;
+    margin: auto;
+}
+
+
+
+
+
+/* ^ Media */
 @media only screen and (max-width: 471px) {
     .placeholder {
         height: 186.53px;
